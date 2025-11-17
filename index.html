@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>EK Cup Foundation — Cup Poured, Life Changed.</title>
+  <meta name="description" content="EK Cup Foundation helps needy kids around the world with food, shelter, and education — one cup at a time." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="EK Cup Foundation — Cup Poured, Life Changed.">
+  <meta property="og:description" content="Helping needy kids with food, shelter, and education — one cup at a time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ekcup.org/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EK Cup Foundation — Cup Poured, Life Changed.">
+  <meta name="twitter:description" content="Helping needy kids with food, shelter, and education — one cup at a time.">
+
+  <link rel="canonical" href="https://ekcup.org/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-image:
+        radial-gradient(1100px 560px at 8% -10%, rgba(255, 234, 209, .98), transparent 70%),
+        radial-gradient(900px 500px at 110% 10%, rgba(255, 210, 170, .82), transparent 60%),
+        radial-gradient(1400px 900px at 50% 120%, rgba(255, 244, 214, 1), #ffffff 70%);
+      background-attachment: fixed;
+    }
+    .noise:before {
+      content:""; position:fixed; inset:0; pointer-events:none; opacity:.06; mix-blend-mode:multiply;
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)"/></svg>');
+      background-size:260px 260px;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in { opacity:0; transform: translateY(12px); animation: fade .7s ease .05s forwards; }
+      .fade-in-2 { opacity:0; transform: translateY(12px); animation: fade .85s ease .15s forwards; }
+      @keyframes fade { to { opacity:1; transform:none; } }
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.9));
+      backdrop-filter: blur(12px);
+    }
+    .card {
+      border:1px solid #fed7aa;
+      background:#fff;
+      border-radius:18px;
+      box-shadow: 0 16px 35px rgba(15,23,42,.06);
+    }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:.9rem 1.3rem; border-radius:999px; font-weight:700; transition:.15s;
+    }
+    .btn-primary {
+      background:#fbbf24; color:#111827;
+      box-shadow:0 10px 25px rgba(234,179,8,.35);
+    }
+    .btn-primary:hover {
+      filter:brightness(0.96); transform: translateY(-1px);
+      box-shadow:0 14px 32px rgba(234,179,8,.45);
+    }
+    .btn-ghost {
+      background:#ffffffcc; border:1px solid #fed7aa;
+    }
+    .btn-ghost:hover { background:#fff7ec; }
+    .ring-focus:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px #fbbf24;
+    }
+    .chip {
+      display:inline-flex; align-items:center; gap:.4rem;
+      padding:.4rem .7rem; border-radius:999px; font-size:.8rem;
+    }
+    .logo { height:auto; width:min(190px, 48vw); display:block; }
+    .logo-footer { height:auto; width:min(160px, 46vw); display:block; opacity:.97; }
+    .opt {
+      display:flex; align-items:center; gap:.6rem;
+      padding:.7rem .9rem; border-radius:14px;
+      border:1px solid #fed7aa; cursor:pointer; background:#fffaf2;
+    }
+    .opt input { accent-color:#f59e0b; width:1.05rem; height:1.05rem; }
+    .opt:hover { background:#fff3e0; }
+    .text-balance { text-wrap: balance; }
+    .pillnav::-webkit-scrollbar { display:none; }
+    .pillnav { -ms-overflow-style:none; scrollbar-width:none; }
+    .safe-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+    .noise { position:relative; }
+  </style>
+</head>
+<body class="text-slate-800 noise">
+  <!-- Top bar -->
+  <div class="w-full bg-amber-50/90 border-b border-amber-100/80">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-sm sm:text-[0.95rem] text-amber-900">
+      Helping needy kids around the world — <span class="font-semibold">one cup at a time.</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-[#fffaf4]/90 backdrop-blur border-b border-orange-100/70">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center gap-3 sm:gap-4">
+      <a href="#top" class="flex items-center gap-2 sm:gap-3 no-underline flex-1 min-w-0">
+        <img alt="EK Cup Foundation logo" class="logo" src="logo.png" decoding="async" />
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 truncate">
+          EK Cup Foundation
+        </span>
+      </a>
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="#about" class="hover:text-amber-700">About</a>
+        <a href="#programs" class="hover:text-amber-700">Programs</a>
+        <a href="#impact" class="hover:text-amber-700">Impact</a>
+        <a href="#stories" class="hover:text-amber-700">Stories</a>
+        <a href="#faq" class="hover:text-amber-700">FAQ</a>
+        <a href="#donate" class="btn btn-primary ring-focus">Donate Now</a>
+      </nav>
+    </div>
+    <!-- Mobile pill nav -->
+    <div class="md:hidden border-t border-orange-100 bg-[#fffaf4]/95">
+      <div class="pillnav overflow-x-auto no-scrollbar">
+        <div class="flex gap-2 px-3 py-2">
+          <a href="#about" class="px-4 py-2 text-sm rounded-full bg-white border border-amber-200">About</a>
+          <a href="#programs" class="px-4 py-2 text-sm rounded-full bg-white border border-amber-200">Programs</a>
+          <a href="#impact" class="px-4 py-2 text-sm rounded-full bg-white border border-amber-200">Impact</a>
+          <a href="#stories" class="px-4 py-2 text-sm rounded-full bg-white border border-amber-200">Stories</a>
+          <a href="#faq" class="px-4 py-2 text-sm rounded-full bg-white border border-amber-200">FAQ</a>
+          <a href="#donate" class="px-4 py-2 text-sm rounded-full bg-amber-300 text-slate-900 border border-amber-300 font-semibold">Donate</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-10 md:py-16 grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="fade-in">
+        <span class="chip bg-amber-100 text-amber-900 border border-amber-200">
+          🤝 Welcoming • Global • Hopeful
+        </span>
+        <h1 class="mt-3 sm:mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-balance text-slate-900">
+          Cup Poured, <span class="text-amber-600">Life Changed.</span>
+        </h1>
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-700 max-w-xl">
+          EK Cup Foundation stands with children who need help the most — focusing on
+          <strong>Food, Shelter, and Education</strong> so they can grow, rest, and learn with dignity.
+        </p>
+        <div class="mt-5 sm:mt-6 grid grid-cols-1 sm:flex gap-3">
+          <a href="#donate" class="btn btn-primary ring-focus w-full sm:w-auto">Donate Now</a>
+          <a href="#impact" class="btn btn-ghost ring-focus w-full sm:w-auto">See Impact</a>
+        </div>
+
+        <!-- Counters -->
+        <div class="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl">
+          <div class="card p-4 sm:p-5 text-center">
+            <div class="text-xs uppercase text-slate-500 tracking-wide">Cups Served</div>
+            <div id="cupsTotal" class="text-2xl sm:text-3xl font-extrabold text-amber-600">0</div>
+          </div>
+          <div class="card p-4 sm:p-5 text-center">
+            <div class="text-xs uppercase text-slate-500 tracking-wide">Families Helped</div>
+            <div id="familiesTotal" class="text-2xl sm:text-3xl font-extrabold text-amber-600">0</div>
+          </div>
+          <div class="card p-4 sm:p-5 text-center">
+            <div class="text-xs uppercase text-slate-500 tracking-wide">Warmth Items</div>
+            <div id="warmthTotal" class="text-2xl sm:text-3xl font-extrabold text-amber-600">0</div>
+          </div>
+          <div class="card p-4 sm:p-5 text-center">
+            <div class="text-xs uppercase text-slate-500 tracking-wide">Volunteer Hours</div>
+            <div id="hoursTotal" class="text-2xl sm:text-3xl font-extrabold text-amber-600">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Focus tiles -->
+      <div class="fade-in-2 glass rounded-2xl md:rounded-3xl border border-orange-100 p-4 sm:p-6 md:p-8 shadow-lg shadow-amber-100/60">
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900">Our Focus for Kids</h3>
+        <div class="mt-4 sm:mt-6 grid grid-cols-3 gap-3 sm:gap-4 text-center">
+          <div class="p-4 sm:p-5 rounded-xl bg-amber-50 border border-amber-100">
+            <span class="block text-xl sm:text-2xl">🍲</span>
+            <span class="block mt-1 sm:mt-2 text-sm font-semibold text-slate-700">Food</span>
+          </div>
+          <div class="p-4 sm:p-5 rounded-xl bg-orange-50 border border-orange-100">
+            <span class="block text-xl sm:text-2xl">🏠</span>
+            <span class="block mt-1 sm:mt-2 text-sm font-semibold text-slate-700">Shelter</span>
+          </div>
+          <div class="p-4 sm:p-5 rounded-xl bg-emerald-50 border border-emerald-100">
+            <span class="block text-xl sm:text-2xl">📚</span>
+            <span class="block mt-1 sm:mt-2 text-sm font-semibold text-slate-700">Education</span>
+          </div>
+        </div>
+        <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-slate-600 flex flex-wrap gap-2">
+          <span class="chip bg-white border border-orange-200">📍 Global reach</span>
+          <span class="chip bg-white border border-orange-200">❤️ Facts-first impact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- About -->
+    <section id="about" class="py-10 sm:py-12">
+      <div class="max-w-5xl mx-auto px-3 sm:px-4 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">About Us</h2>
+        <p class="text-slate-700 text-base sm:text-lg leading-relaxed mt-2 sm:mt-3 text-balance">
+          EK Cup Foundation exists to stand in the gap for children in need. We start with essentials and
+          build pathways to long-term hope through Food, Shelter, and Education. Every step we take is grounded
+          in honesty, dignity, and responsible stewardship.
+        </p>
+
+        <div class="mt-6 sm:mt-8 card p-4 sm:p-6 text-left bg-white/95">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 text-center">Our Vision</h3>
+          <p class="mt-2 sm:mt-3 text-slate-700 leading-relaxed text-center text-balance">
+            A world where every child has a full plate, a safe place to sleep, and a real chance to learn —
+            no matter where they were born.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-slate-900">Our Programs</h2>
+        <p class="text-center text-slate-600 mt-2 text-sm sm:text-base">
+          Small gifts meeting real needs in food, shelter, warmth, and education.
+        </p>
+        <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <article class="card p-5 text-center hover:shadow-xl hover:-translate-y-[1px] transition">
+            <h3 class="text-base sm:text-lg font-semibold text-amber-700">Food Aid</h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              Staple foods & meal kits for children and families facing hunger.
+            </p>
+            <a href="#donate" class="inline-block mt-4 text-amber-700 underline underline-offset-4 text-sm">
+              Support this
+            </a>
+          </article>
+          <article class="card p-5 text-center hover:shadow-xl hover:-translate-y-[1px] transition">
+            <h3 class="text-base sm:text-lg font-semibold text-amber-700">Warmth Kits</h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              Gloves, thermal wear, and blankets for cold nights and harsh seasons.
+            </p>
+            <a href="#donate" class="inline-block mt-4 text-amber-700 underline underline-offset-4 text-sm">
+              Support this
+            </a>
+          </article>
+          <article class="card p-5 text-center hover:shadow-xl hover:-translate-y-[1px] transition">
+            <h3 class="text-base sm:text-lg font-semibold text-amber-700">Shelter Support</h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              Short-term housing assistance and safe stays for vulnerable kids.
+            </p>
+            <a href="#donate" class="inline-block mt-4 text-amber-700 underline underline-offset-4 text-sm">
+              Support this
+            </a>
+          </article>
+          <article class="card p-5 text-center hover:shadow-xl hover:-translate-y-[1px] transition">
+            <h3 class="text-base sm:text-lg font-semibold text-amber-700">Education Pathways</h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              School supplies, tuition support, and tutoring for long-term growth.
+            </p>
+            <a href="#donate" class="inline-block mt-4 text-amber-700 underline underline-offset-4 text-sm">
+              Support this
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section id="impact" class="py-12 sm:py-16 bg-amber-50/80 border-y border-amber-100">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Impact Snapshot</h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base max-w-xl">
+              These numbers will grow as real donations come in and are carefully tracked. Every cup matters.
+            </p>
+          </div>
+          <div class="card px-4 py-3 bg-white/90 max-w-sm">
+            <div class="text-xs uppercase text-slate-500 tracking-wide">Current Goal</div>
+            <div class="mt-1 font-semibold text-slate-900 text-sm">
+              First <span class="text-amber-700 font-bold">100 Cups of Hope</span>
+            </div>
+            <div class="mt-2 w-full h-2 rounded-full bg-amber-100 overflow-hidden">
+              <!-- for now this is 0%; we’ll wire it to real data later -->
+              <div class="h-full bg-amber-400" style="width: 0%;"></div>
+            </div>
+            <div class="mt-1 flex justify-between text-[11px] text-slate-500">
+              <span><span id="goalCupsCurrent">0</span> / <span id="goalCupsTarget">100</span> cups</span>
+              <span>Growing soon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div class="card p-5 bg-white/95">
+            <div class="font-semibold text-slate-900">Food</div>
+            <p class="text-sm text-slate-600 mt-2">
+              Cups Served: <strong id="cupsTotal2">0</strong>
+            </p>
+            <p class="text-xs text-slate-500 mt-1">Updated based on real donations and distributions.</p>
+          </div>
+          <div class="card p-5 bg-white/95">
+            <div class="font-semibold text-slate-900">Shelter</div>
+            <p class="text-sm text-slate-600 mt-2">
+              Families Helped: <strong id="familiesTotal2">0</strong>
+            </p>
+            <p class="text-xs text-slate-500 mt-1">Short-term shelter and safe spaces for kids.</p>
+          </div>
+          <div class="card p-5 bg-white/95">
+            <div class="font-semibold text-slate-900">Warmth</div>
+            <p class="text-sm text-slate-600 mt-2">
+              Warmth Items: <strong id="warmthTotal2">0</strong>
+            </p>
+            <p class="text-xs text-slate-500 mt-1">Blankets, winter wear, and essential warmth items.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate -->
+    <section id="donate" class="py-16 sm:py-20 bg-gradient-to-br from-amber-50 to-white safe-bottom">
+      <div class="max-w-6xl mx-auto px-3 sm:px-4">
+        <div class="text-center">
+          <span class="chip bg-white border border-orange-200 text-xs sm:text-sm">
+            🧾 Secure checkout • Card, Apple Pay, Google Pay
+          </span>
+          <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">
+            Make a Difference Today
+          </h2>
+          <p class="text-slate-700 mt-2 text-base sm:text-lg">
+            Set up a <strong>monthly, bi-weekly, or weekly</strong> gift to keep help flowing year-round,
+            or give once as you feel led.
+          </p>
+        </div>
+
+        <div class="mt-6 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8">
+          <!-- Amount + frequency -->
+          <div class="card p-4 sm:p-6 bg-white/95">
+            <label class="block text-sm font-medium text-slate-700">Choose an amount</label>
+            <div class="mt-3 grid grid-cols-2 sm:inline-flex sm:rounded-2xl border border-orange-200 bg-white overflow-hidden">
+              <button class="tier px-4 sm:px-6 py-3 font-semibold border-r border-orange-200 data-[active=true]:bg-amber-200" data-amount="5">$5</button>
+              <button class="tier px-4 sm:px-6 py-3 font-semibold border-r border-orange-200 data-[active=true]:bg-amber-200" data-amount="20">$20</button>
+              <button class="tier px-4 sm:px-6 py-3 font-semibold border-r border-orange-200 data-[active=true]:bg-amber-200" data-amount="50">$50</button>
+              <button class="tier px-4 sm:px-6 py-3 font-semibold data-[active=true]:bg-amber-200" data-amount="100">$100</button>
+            </div>
+            <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+              <input id="customAmount" type="number" min="1" inputmode="decimal" placeholder="Custom amount"
+                     class="px-4 py-3 rounded-xl border border-orange-200 text-black w-full sm:w-48" />
+              <span class="text-xs text-slate-500">Any amount helps.</span>
+            </div>
+
+            <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="opt">
+                <input type="radio" name="freq" value="one_time" checked>
+                One-time
+              </label>
+              <label class="opt">
+                <input type="radio" name="freq" value="weekly">
+                Weekly
+              </label>
+              <label class="opt">
+                <input type="radio" name="freq" value="biweekly">
+                Bi-Weekly
+              </label>
+              <label class="opt">
+                <input type="radio" name="freq" value="monthly">
+                Monthly
+              </label>
+            </div>
+
+            <div class="mt-5 text-sm text-slate-700">
+              <div class="font-semibold mb-1">How we count impact (for preview):</div>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>$5</strong> = 1 Cup Served</li>
+                <li><strong>$20</strong> = 1 Family Helped</li>
+                <li><strong>Every $10</strong> = 1 Warmth Item</li>
+              </ul>
+              <p class="mt-2 text-xs text-slate-500">
+                Actual donation amounts are confirmed and processed on the secure Stripe checkout page.
+              </p>
+            </div>
+          </div>
+
+          <!-- Impact preview -->
+          <div class="card p-4 sm:p-6 bg-white/95">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900">Your Impact Preview</h3>
+              <img alt="EK logo" class="logo w-[140px] sm:w-[180px]" src="logo.png" decoding="async" />
+            </div>
+            <p class="text-slate-600 mt-1 text-sm">
+              This preview shows how your gift translates into help on the ground.
+            </p>
+
+            <div class="mt-4 sm:mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-center">
+              <div class="p-4 rounded-xl bg-amber-50 border border-amber-100">
+                <div class="text-xs uppercase text-slate-500">Cups Served</div>
+                <div id="cupsPreview" class="text-xl sm:text-2xl font-extrabold text-amber-700">0</div>
+              </div>
+              <div class="p-4 rounded-xl bg-orange-50 border border-orange-100">
+                <div class="text-xs uppercase text-slate-500">Families Helped</div>
+                <div id="familiesPreview" class="text-xl sm:text-2xl font-extrabold text-amber-700">0</div>
+              </div>
+              <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100">
+                <div class="text-xs uppercase text-slate-500">Warmth Items</div>
+                <div id="warmthPreview" class="text-xl sm:text-2xl font-extrabold text-amber-700">0</div>
+              </div>
+            </div>
+
+            <div class="mt-5 sm:mt-6 grid grid-cols-1 sm:flex sm:flex-row items-center gap-3">
+              <a id="donateBtn" href="#" class="btn btn-primary ring-focus w-full sm:w-auto">
+                Continue to Secure Checkout
+              </a>
+              <span class="text-xs text-slate-600 text-center sm:text-left">
+                Recurring gifts keep food, shelter, and education flowing consistently.
+              </span>
+            </div>
+            <p class="mt-3 text-[11px] sm:text-xs text-slate-500 text-center sm:text-left">
+              Checkout is processed by Stripe. EK Cup Foundation never sees your full card details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stories (new section) -->
+    <section id="stories" class="py-12 sm:py-16">
+      <div class="max-w-6xl mx-auto px-3 sm:px-4">
+        <div class="text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Stories from the Cup</h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
+            This space is reserved for real stories of kids and families helped through EK Cup Foundation.
+            As soon as help goes out, their journeys will be shared here with care and respect.
+          </p>
+        </div>
+
+        <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <article class="card p-4 sm:p-5 bg-white/95">
+            <div class="text-xs uppercase text-amber-700 tracking-wide font-semibold mb-1">Coming Soon</div>
+            <h3 class="font-semibold text-slate-900 text-sm sm:text-base">
+              A first family warmed for winter
+            </h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              This card will tell the story of a real family receiving warmth kits, shared only with their permission.
+            </p>
+          </article>
+          <article class="card p-4 sm:p-5 bg-white/95">
+            <div class="text-xs uppercase text-amber-700 tracking-wide font-semibold mb-1">Coming Soon</div>
+            <h3 class="font-semibold text-slate-900 text-sm sm:text-base">
+              A child’s plate filled after school
+            </h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              Here you’ll see how one cup, one meal, and one act of kindness made a real difference for a child.
+            </p>
+          </article>
+          <article class="card p-4 sm:p-5 bg-white/95">
+            <div class="text-xs uppercase text-amber-700 tracking-wide font-semibold mb-1">Coming Soon</div>
+            <h3 class="font-semibold text-slate-900 text-sm sm:text-base">
+              A step closer to the classroom
+            </h3>
+            <p class="mt-2 text-slate-600 text-sm">
+              Future updates will share how school supplies, fees, and encouragement opened doors to education.
+            </p>
+          </article>
+        </div>
+
+        <p class="mt-6 text-xs sm:text-sm text-slate-500 text-center max-w-2xl mx-auto">
+          EK Cup Foundation is committed to sharing only true stories, with dignity and consent, never exaggeration.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12 sm:py-16">
+      <div class="max-w-5xl mx-auto px-3 sm:px-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center">Frequently Asked Questions</h2>
+        <div class="mt-6 sm:mt-8 space-y-3">
+          <details class="card p-4 sm:p-5 group">
+            <summary class="cursor-pointer font-semibold flex items-center justify-between text-base">
+              Where does my donation go?
+              <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-700">
+              Direct program support for Food, Shelter, and Education. A smaller portion covers operations
+              so we can keep serving well and sustainably.
+            </p>
+          </details>
+          <details class="card p-4 sm:p-5 group">
+            <summary class="cursor-pointer font-semibold flex items-center justify-between text-base">
+              How do you choose which kids to help first?
+              <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-700">
+              We prioritize by urgency and vulnerability through partner referrals, local contacts, and vetted requests.
+            </p>
+          </details>
+          <details class="card p-4 sm:p-5 group">
+            <summary class="cursor-pointer font-semibold flex items-center justify-between text-base">
+              Can I make my gift recurring?
+              <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-700">
+              Yes—choose weekly, bi-weekly, or monthly in the Donate section above. Recurring donors keep help steady all year.
+            </p>
+          </details>
+          <details class="card p-4 sm:p-5 group">
+            <summary class="cursor-pointer font-semibold flex items-center justify-between text-base">
+              Will I get a tax receipt?
+              <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-700">
+              Yes. A receipt is emailed immediately after your donation is processed.
+            </p>
+          </details>
+          <details class="card p-4 sm:p-5 group">
+            <summary class="cursor-pointer font-semibold flex items-center justify-between text-base">
+              How are the impact numbers calculated?
+              <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-700">
+              We use simple rules: $5 = 1 Cup Served, $20 = 1 Family Helped, every $10 = 1 Warmth Item.
+              Totals will only increase based on real, verified donations.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-white">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-10 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div class="flex items-center gap-3">
+        <img alt="EK logo" class="logo-footer" src="logo.png" decoding="async" />
+        <div>
+          <div class="text-lg sm:text-xl font-extrabold">EK Cup Foundation</div>
+          <p class="mt-1 text-xs sm:text-sm text-slate-300">Cup Poured, Life Changed.</p>
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Quick Links</div>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#programs" class="hover:underline">Programs</a></li>
+          <li><a href="#impact" class="hover:underline">Impact</a></li>
+          <li><a href="#stories" class="hover:underline">Stories</a></li>
+          <li><a href="#faq" class="hover:underline">FAQ</a></li>
+          <li><a href="#donate" class="hover:underline">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Legal</div>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="privacy.html" class="hover:underline underline-offset-2">Privacy Policy</a></li>
+          <li><a href="terms.html" class="hover:underline underline-offset-2">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Contact</div>
+        <p class="text-sm text-slate-300">info@ekcup.org</p>
+        <p class="text-xs text-slate-400 mt-2">Socials coming soon.</p>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 py-4 text-center text-xs sm:text-sm text-slate-400">
+        © <span id="year"></span> EK Cup Foundation • All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // STRIPE PAYMENT LINKS – YOUR TEST LINKS
+    const STRIPE_ONE_TIME_URL = "https://donate.stripe.com/test_fZu14n5RNan3b329Ct97G01";
+    const STRIPE_WEEKLY_URL   = "https://donate.stripe.com/test_fZu3cv6VR1QxefecOF97G02";
+    const STRIPE_BIWEEKLY_URL = "https://donate.stripe.com/test_fZu7sLdkf3YFc768yp97G03";
+    const STRIPE_MONTHLY_URL  = "https://donate.stripe.com/test_dRm14nbc70Mt1sscOF97G04";
+
+    const tiers = document.querySelectorAll('.tier');
+    const custom = document.getElementById('customAmount');
+    const donateBtn = document.getElementById('donateBtn');
+    const freqInputs = document.querySelectorAll('input[name="freq"]');
+    const prevCups = document.getElementById('cupsPreview');
+    const prevFamilies = document.getElementById('familiesPreview');
+    const prevWarmth = document.getElementById('warmthPreview');
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    let amount = 20;
+
+    function updatePreview() {
+      const cups = Math.floor(amount / 5);
+      const families = Math.floor(amount / 20);
+      const warmth = Math.floor(amount / 10);
+      if (prevCups) prevCups.textContent = cups;
+      if (prevFamilies) prevFamilies.textContent = families;
+      if (prevWarmth) prevWarmth.textContent = warmth;
+    }
+
+    tiers.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tiers.forEach(x => x.setAttribute('data-active', 'false'));
+        btn.setAttribute('data-active', 'true');
+        amount = Number(btn.getAttribute('data-amount') || '0');
+        if (custom) custom.value = '';
+        updatePreview();
+      });
+    });
+
+    if (custom) {
+      custom.addEventListener('input', () => {
+        const v = Number(custom.value || '0');
+        if (v > 0) {
+          amount = v;
+          tiers.forEach(x => x.setAttribute('data-active', 'false'));
+          updatePreview();
+        }
+      });
+    }
+
+    updatePreview();
+
+    function chosenFrequency() {
+      return Array.from(freqInputs).find(r => r.checked)?.value || "one_time";
+    }
+
+    function checkoutUrlForFrequency() {
+      const freq = chosenFrequency();
+      if (freq === "weekly")   return STRIPE_WEEKLY_URL;
+      if (freq === "biweekly") return STRIPE_BIWEEKLY_URL;
+      if (freq === "monthly")  return STRIPE_MONTHLY_URL;
+      return STRIPE_ONE_TIME_URL;
+    }
+
+    donateBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = checkoutUrlForFrequency();
+      if (!url) {
+        alert("Stripe links are not set yet.");
+        return;
+      }
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
